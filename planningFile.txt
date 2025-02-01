@@ -1,0 +1,49 @@
+Recipe Sharing App :  
+
+*** What?? 
+A platform where users can share, manage, and explore recipes
+
+------------------------------------------------------
+
+*** Functionality: 
+
+1. User Authentication: Sign up & login using email and password  
+2. (CRUD) operations on Recipe: Users can Create, Read, Update, Delete their recipes 
+3. Recipe Details: Each recipe contains a name, ingredients, steps, and tags
+4. Favoriting Recipes: Users can favorite/unfavorite recipes.  ( using recipe id & token )
+5. List Favorite Recipes: Users can see their favorited recipes. (using user token)   
+7. Pagination: User can get recipes using pagination
+9. Testing: Testing every endpoints on Postman
+
+-----------------------------------------------------------
+
+
+*** Models? 
+
+1. User (id, name, email, password)  
+2. Recipe (id, name, ingredients, steps, tags, user_id)  
+
+---
+
+*** Routes?
+
+ User Route (Authentication):  
+- POST /signup - Create a new user account 
+- POST /login - Log in to an existing account.  
+
+ Recipes Management:  
+- POST /recipes - Create a new recipe (with token)
+- GET /recipes - Get all recipes (with pagination)  
+- GET /recipes/:id - Get a specific recipe by ID 
+- PUT /recipes/:id - Update an existing recipe  
+- DELETE /recipes/:id - Delete a recipe
+
+Favorites:  
+- POST /favorites/:recipeId - Post Favorite a recipe.    
+- GET /favorites - Get all favorited recipes of a particular user
+
+------------------------------------------
+*** Security & Middleware :
+- Passwords are securely hashed using bcrypt
+- JWT-based authentication is used for protected routes.
+- Middleware ensures only authorized users can modify or delete recipes.
