@@ -33,4 +33,7 @@ A backend-application where users can share, manage, and explore recipes. **Reci
 - `POST /favorites/:recipeId` - Post Favorite a recipe.    
 - `GET /favorites` - Get all favorited recipes of a particular user
 
+## System Diagram Link :  
+[Find here](https://drive.google.com/file/d/1APhE2-q_m12Vn400g4ltShW0HAOQ7Ks3/view?usp=sharing)
+
 
